@@ -2,10 +2,10 @@ const express = require("express")
 
 const app = express();
 
-app.use(express.json())
-router.get("/", (req, res) => {
+app.use(express.json());
+app.get("/", (req, res) => {
     res.send("it's working  ues  /posts/public")
-})
+});
 app.use('/auth', require("./routes/auth"))
 app.use('/posts', require("./routes/posts"))
 
